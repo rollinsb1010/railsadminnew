@@ -1,24 +1,39 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
+ruby '1.9.3'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+# gem 'sqlite3'
 gem 'rails_admin'
 gem 'ckeditor', '3.7.1'
 gem 'paperclip'
-
-
+gem 'heroku'
+gem 'pg'
+gem 'thin'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-  
 
+# Heroku hates sqlite3 and taps is dependent on sqlite3
+#group :development do
+ # gem 'taps', :require => false
+#end
+  
+#group :development, :test do
+#  gem 'sqlite3'
+#  gem 'taps', :require => false
+#end
+
+#group :production do
+#  gem 'pg'
+#  gem 'thin'
+#end
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
